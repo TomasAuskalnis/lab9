@@ -1,0 +1,55 @@
+name: lab9-basic-tests
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+  workflow_dispatch: # Allows you to trigger it manually from the Actions tab
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Check out the repository code
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # Step 2: Make sure validate.sh is executable
+      - name: Make Script Executable
+        run: chmod +x ./validate.sh
+
+      # Step 3: Run automated test cases piping input into validate.sh
+      - name: Run and verify output
+        run: |
+          echo "Running automated tests..."
+          
+          # Test 1: Valid inputs (Name <= 15, Mobile <= 10) -> Should output PASS
+          output=$(printf "John\n1234567890\n" | ./validate.sh)
+          if [ "$output" = "PASS" ]; then
+            echo "✅ Test 1 Passed (Valid inputs)"
+          else
+            echo "❌ Test 1 Failed: Expected 'PASS', got '$output'"
+            exit 1
+          fi
+
+          # Test 2: Name too long (> 15 chars) -> Should output FAIL
+          output=$(printf "Alexander the Great\n1234567890\n" | ./validate.sh)
+          if [ "$output" = "FAIL" ]; then
+            echo "✅ Test 2 Passed (Long name caught)"
+          else
+            echo "❌ Test 2 Failed: Expected 'FAIL', got '$output'"
+            exit 1
+          fi
+
+          # Test 3: Mobile too long (> 10 chars) -> Should output FAIL
+          output=$(printf "John\n1234567890123\n" | ./validate.sh)
+          if [ "$output" = "FAIL" ]; then
+            echo "✅ Test 3 Passed (Long mobile caught)"
+          else
+            echo "❌ Test 3 Failed: Expected 'FAIL', got '$output'"
+            exit 1
+          fi
+
+          echo "All tests completed successfully!"
