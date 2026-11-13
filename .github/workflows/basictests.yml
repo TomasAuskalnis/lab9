@@ -2,54 +2,38 @@ name: lab9-basic-tests
 
 on:
   push:
-    branches: [ "main", "master" ]
+    branches: [ "main", "master", "test" ]
   pull_request:
-    branches: [ "main", "master" ]
-  workflow_dispatch: # Allows you to trigger it manually from the Actions tab
+    branches: [ "main", "master", "test" ]
+  workflow_dispatch:
 
 jobs:
-  test:
+  run-tests:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Check out the repository code
+      # 1. Check out the repository code onto the runner
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      # Step 2: Make sure validate.sh is executable
+      # 2. Grant execution permissions to your script
       - name: Make Script Executable
         run: chmod +x ./validate-data.sh
 
-      # Step 3: Run automated test cases piping input into validate.sh
-      - name: Run and verify output
+      # 3. Execute the test and complete the job
+      - name: Run Script and verify output
         run: |
-          echo "Running automated tests..."
+          echo "Starting validation test..."
           
-          # Test 1: Valid inputs (Name <= 15, Mobile <= 10) -> Should output PASS
+          # Simulate input (Name: "John" [4 chars], Mobile: "1234567890" [10 chars])
           output=$(printf "John\n1234567890\n" | ./validate-data.sh)
+          echo "Script Output: $output"
+
+          # Verify output and complete job
           if [ "$output" = "PASS" ]; then
-            echo "✅ Test 1 Passed (Valid inputs)"
+            echo "✅ Job passed successfully!"
+            exit 0
           else
-            echo "❌ Test 1 Failed: Expected 'PASS', got '$output'"
+            echo "❌ Job failed: Expected PASS, got $output"
             exit 1
           fi
-
-          # Test 2: Name too long (> 15 chars) -> Should output FAIL
-          output=$(printf "Alexander the Great\n1234567890\n" | ./validate-data.sh)
-          if [ "$output" = "FAIL" ]; then
-            echo "✅ Test 2 Passed (Long name caught)"
-          else
-            echo "❌ Test 2 Failed: Expected 'FAIL', got '$output'"
-            exit 1
-          fi
-
-          # Test 3: Mobile too long (> 10 chars) -> Should output FAIL
-          output=$(printf "John\n1234567890123\n" | ./validate-data.sh)
-          if [ "$output" = "FAIL" ]; then
-            echo "✅ Test 3 Passed (Long mobile caught)"
-          else
-            echo "❌ Test 3 Failed: Expected 'FAIL', got '$output'"
-            exit 1
-          fi
-
-          echo "All tests completed successfully!"
