@@ -1,0 +1,544 @@
+    1  nano cr102.py
+    2  ls
+    3  rm cr102.py.xs
+    4  rm cr102.pyxs
+    5  nano cr102.py
+    6  ls
+    7  git add cr102.py
+    8  git commit -m "Added cr102.py"
+    9  git push origin CR102
+   10  git branch -m branchv2 tag-test
+   11  cd
+   12  cd devops
+   13  ls
+   14  cd week2
+   15  ls
+   16  cd devopsWeek1
+   17  ls
+   18  cd week2tag
+   19  ls
+   20  git branch
+   21  git branch -m branchv2 tag-test
+   22  git push origin tag-test
+   23  cd
+   24  cd devops
+   25  cd week1
+   26  ls
+   27  cd devopsWeek1
+   28  git checkout main
+   29  git merge CR102
+   30  git commit -m "Merged CR102 to Main"
+   31  git push origin main
+   32  git fetch main
+   33  git pull
+   34  ls
+   35  git push origin main
+   36  git pull
+   37  ls
+   38  git branch
+   39  git pull
+   40  ls
+   41  git status
+   42  git pull
+   43  git checkout CR102
+   44  git pull
+   45  git checkout main
+   46  git pull
+   47  git push origin main
+   48  git log --oneline
+   49  git pull --no-rebase
+   50  ls
+   51  git push origin main
+   52  ls
+   53  mongosh "mongodb+srv://cluster0.x93tkgs.mongodb.net/" --apiVersion 1 --username tomasu345j_db_user
+   54  curl icanhazip.com
+   55  mongosh "mongodb+srv://cluster0.x93tkgs.mongodb.net/" --apiVersion 1 --username tomasu345j_db_user
+   56  curl icanhazip
+   57  curl canihazip
+   58  curl icanhazip
+   59  curl icanhazip.com
+   60  ls
+   61  cd devops
+   62  ls
+   63  cd week4
+   64  mkdir week4
+   65  cd week4
+   66  git init
+   67  git branh -m main
+   68  git branch -m main
+   69  git log
+   70  git clone git@github.com:TomasAuskalnis/devopsProj.git
+   71  ls
+   72  cd devopsProj
+   73  nano count1.sh
+   74  nano count2.sh
+   75  nano count3.sh
+   76  nano count4.sh
+   77  nano count5.sh
+   78  nano count6.sh
+   79  nano count.7sh
+   80  rm count.7sh
+   81  nano count7.sh
+   82  nano count8.sh
+   83  nano count9.sh
+   84  nano count10.sh
+   85  bash nano count1.sh
+   86  nano count1.sh
+   87  bash count1.sh
+   88  nano count2.sh
+   89  nano count3.sh
+   90  nano count4.sh
+   91  nano count5.sh
+   92  nano count6.sh
+   93  nano count7.sh
+   94  nano count8.sh
+   95  nano count9.sh
+   96  nano count10.sh
+   97  bash count1.sh
+   98  nano count2.sh
+   99  bash count1.sh
+  100  nano count2.sh
+  101  chmod +x count2.sh
+  102  bash count1.sh
+  103  chmod +x count3.sh
+  104  chmod +x count4.sh
+  105  chmod +x count5.sh
+  106  chmod +x count6.sh
+  107  chmod +x count7.sh
+  108  chmod +x count8.sh
+  109  chmod +x count9.sh
+  110  chmod +x count10.sh
+  111  bash count1.sh
+  112  git add count1.sh, count2.sh, count3.sh, count4.sh, count5.sh, count6.sh, count7.sh, count8.sh, count9.sh, count10.sh
+  113  git add count1.sh
+  114  git add count2.sh
+  115  git add count3.sh
+  116  git add count4.sh
+  117  git add count5.sh
+  118  git add count6.sh
+  119  git add count7.sh
+  120  git add count8.sh
+  121  git add count9.sh
+  122  git add count10.sh
+  123  git commit -m "add 10 scripts"
+  124  git push origin main
+  125  nano count10.sh
+  126  git add count10.sh
+  127  git commit -m "Fix count10.sh bug fixes #11"
+  128  git push origin main
+  129  git add count10.sh
+  130  git commit -m "Fixes to count10.sh bug fixes #11"
+  131  nano count10.sh
+  132  git add count10.sh
+  133  git commit -m "Reset count10.sh"
+  134  git push origin main
+  135  nano coun10.sh
+  136  nano count10.sh
+  137  git add count10.sh
+  138  git commit -m "Fixes to count.sh bug fixes #11"
+  139  git push origin main
+  140  git reset --hard HEAD~1
+  141  git push --force origin main
+  142  git add count10.sh
+  143  git commit -m "Fix count10.sh attempt 2 closes #11"
+  144  nano count10.sh
+  145  git add count10.sh
+  146  git commit -m "Fix count10.sh attempt 2 fixes #11"
+  147  git push origin main
+  148  git pull
+  149  git push origin main
+  150  git config pull.rebase false
+  151  git push origin main
+  152  git config pull.ff only
+  153  git pull
+  154  git rebase
+  155  git pull
+  156  git push origin main
+  157  git pull
+  158  git branch count1fix
+  159  git checkout count1fix
+  160  nano count1.sh
+  161  git add count1.sh
+  162  bash count1.sh
+  163  git commit -m "fix count1.sh fixes #13"
+  164  git checkout main
+  165  git merge count1fix
+  166  git commit -m "fix count1.sh fixes #13"
+  167  gut push
+  168  git push
+  169  git commit -m "fix count1.sh fixes #13"
+  170  git branch count2fix
+  171  git checkout count2fix
+  172  nano count2.sh
+  173  bash count2.sh
+  174  git add count2.sh
+  175  git checkout main
+  176  git merge count2fix
+  177  git checkout count2fix
+  178  git commit -m "fix count2.sh"
+  179  git push origin count2fix
+  180  git checkout main
+  181  git merge count2fix
+  182  git commit -m "merge count 2 fix with main fixes #14"
+  183  git reset --hard HEAD~1
+  184  git push --force origin <branch-name>
+  185  git reset --hard HEAD~1
+  186  git push --force origin main
+  187  curl canihazip
+  188  curl canihazip.com
+  189  curl icanhazip.com
+  190  ls
+  191  rm Lab4_MongoDB_3_data.txt
+  192  curl icanhazip.com
+  193  mkdir test
+  194  cd test
+  195  git clone git@github.com:pearse1104/X00227150.git
+  196  ls
+  197  cd X00227150
+  198  nano hello.txt
+  199  git add hello.txt
+  200  git commit -m "Added hello.txt"
+  201  git push origin main
+  202  mkdir v1
+  203  cd v1
+  204  git clone git@github.com:TomasAuskalnis/devopsProj.git
+  205  cd devsopProj
+  206  cd devopsProj
+  207  git branch ONE-V1
+  208  cd
+  209  mkdir v2
+  210  cd v2
+  211  git clone git@github.com:TomasAuskalnis/devopsProj.git
+  212  cd devopsProj
+  213  git branch ONE-V2
+  214  cd
+  215  cd v1
+  216  cd devopsProj
+  217  ls
+  218  nano count1.sh
+  219  git checkout ONE-V1
+  220  nano count1.sh
+  221  git add count1.sh
+  222  git commit -m "Change count1 file to be echo "ONE()1" "
+  223  git commit -m "Change count1 file"
+  224  git push ONE-V1
+  225  git push origin ONE-V1
+  226  cd
+  227  cd v2
+  228  cd devopsProj
+  229  git checkout ONE-V2
+  230  nano count1.sh
+  231  git add count1.sh
+  232  git commit -m "Change count1 file"
+  233  git push origin ONE-V2
+  234  cd
+  235  mkdir mergeTest
+  236  cd mergeTest
+  237  git clone git@github.com:TomasAuskalnis/devopsProj.git
+  238  cd devopsProj
+  239  git merge ONE-V1
+  240  git merge origin ONE-V1
+  241  git merge ONE-V1
+  242  git merge origin/ONE-V1
+  243  git push origin main
+  244  git merge origin/ONE-V2
+  245  nano count1.sh
+  246  git add count1.sh
+  247  git commit -m "Fix merge conflict and merge to main"
+  248  git push origin main
+  249  git merge origin/ONE-V2
+  250  nano
+  251  cd
+  252  mkdir v1-2
+  253  cd v1-2
+  254  git clone 
+  255  tomasu345j@cloudshell:~ (devops-508914)$ cd v1-2
+  256  git clone 
+  257  tomasu345j@cloudshell:~ (d
+  258  git clone git@github.com:TomasAuskalnis/devopsProj.git
+  259  cd devopsProj
+  260  git branch TWO-V1
+  261  cd
+  262  mkdir v2-2
+  263  cd v2-2
+  264  git clone git@github.com:TomasAuskalnis/devopsProj.git
+  265  cd devopsProj
+  266  git branch TWO-V2
+  267  cd
+  268  cd v1-2
+  269  cd devopsProj
+  270  git checkout TWO-V1
+  271  nano count2.sh
+  272  git add count2.sh
+  273  git commit -m "Change count2.sh v1"
+  274  git push origin TWO-V1
+  275  cd
+  276  cd v2-2
+  277  cd devopsProj
+  278  git checkout TWO-V2
+  279  nano count2.sh
+  280  git add count2.sh
+  281  git commit -m "Change count2.sh v2"
+  282  git push origin TWO-V2
+  283  curl icanhazip.com
+  284  mongosh "mongodb+srv://cluster0.x93tkgs.mongodb.net/" --apiVersion 1 --username tomasu345j_db_user
+  285  mongosh "mongodb+srv://cluster0.x93tkgs.mongodb.net/" --apiVersion 1 --username tomasu345j_db_user#
+  286  curl icanhazip.com
+  287  mongosh "mongodb+srv://cluster0.x93tkgs.mongodb.net/" --apiVersion 1 --username tomasu345j_db_user
+  288  mkdir week6
+  289  cd week6
+  290  gh auth login
+  291  gh status
+  292  gh repo create week6
+  293  gh repo create week6 --public
+  294  gh api
+  295  gh repo collaborator
+  296  gh repo edit
+  297  git repo collaborator add auskalnistomas90 --repo TomasAuskalnis/lab6
+  298  gh repo collaborator add auskalnistomas90 --repo TomasAuskalnis/lab6
+  299  gh repo collaborator add auskalnistomas90 --repo TomasAuskalnis/lab6 --permission write
+  300  gh api --method PUT \ -H "Accept": application/vnd.github+json" \ /repos/TomasAuskalnis/lab6/collaborators/auskalnistomas90 \ -f permission="push"
+  301  gh api repos/:TomasAuskalnis/:lab6/collaborators
+  302  gh api --method PUT \ -H "Accept": application/vnd.github+json" \ /repos/TomasAuskalnis/lab6/collaborators/auskalnistomas90 \ -f permission="push"
+  303  gh api repos/:TomasAuskalnis/:lab6/collaborators
+  304  gh api repos/TomasAuskalnis/lab6/collaborators
+  305  gh repo create week6 --public
+  306  gh repo delete week6
+  307  g auth refresh -h github.com delete_repo
+  308  gh auth refresh -h github.com delete_repo
+  309  gh repo delete week6
+  310  gh api repos/TomasAuskalnis/lab6/collaborators
+  311  gh repo create lab6 --public
+  312  gh api repos/TomasAuskalnis/lab6/collaborators
+  313  bash gh api   --method PUT   -H "Accept: application/vnd.github+json"   -H "X-GitHub-Api-Version: 2022-11-28"   /repos/TomasAuskalnis/lab6/collaborators/auskalnistomas90   -f permission=push
+  314  gh api repos/TomasAuskalnis/lab6/collaborators
+  315  gh api   --method DELETE   -H "Accept: application/vnd.github+json"   -H "X-GitHub-Api-Version: 2022-11-28"   /repos/TomasAuskalnis/lab6/collaborators/auskalnistomas90
+  316  gh api repos/TomasAuskalnis/lab6/collaborators
+  317  gh issue create --title "create helloworld echo file" --body "echo hello Pearse from lab6" --assigne "@me" --type Enhancement
+  318  gh issue create --title "create helloworld echo file" --body "echo hello Pearse from lab6" --assignee "@me" --type Enhancement
+  319  cd week6
+  320  gh issue create --title "create helloworld echo file" --body "echo hello Pearse from lab6" --assignee "@me" --type Enhancement
+  321  ls
+  322  git clone git@github.com:TomasAuskalnis/week6.git
+  323  ls
+  324  gh repo clone https://github.com/TomasAuskalnis/lab6.git
+  325  ls
+  326  cd lab6
+  327  gh issue create --title "create helloworld echo file" --body "echo hello Pearse from lab6" --assignee "@me" --type Enhancement
+  328  gh issue create --title "create helloworld echo file" --body "echo hello Pearse from lab6" --assignee "@me" --label Enhancement
+  329  git branch Q12345
+  330  git status
+  331  git branch
+  332  git branch Q12345
+  333  git init
+  334  git branch Q12345
+  335  git branch main
+  336  ls
+  337  git status
+  338  gh status
+  339  gh branch
+  340  git branch Q123456
+  341  git checkout main
+  342  git branch main
+  343  git checkout dev
+  344  git checkout -b main
+  345  git branch Q123456
+  346  git checkout main
+  347  git checkout -b main
+  348  nano test.txt
+  349  git add .
+  350  git commit -m "test"
+  351  git push origin main
+  352  git branch Q123456
+  353  git status
+  354  git checkout Q123456
+  355  nano q1.txt
+  356  nano q2.txt
+  357  nano q3.txt
+  358  nano q4.txt
+  359  nano q5.txt
+  360  nano q6.txt
+  361  git add q1.txt
+  362  git add q2.txt
+  363  git add q3.txt
+  364  git add q4.txt
+  365  git add q5.txt
+  366  git add q6.txt
+  367  git push origin Q123456
+  368  git remote set-url origin git@github.com:TomasAuskalnis/lab6.git
+  369  git push origin Q123456
+  370  git add q1.txt
+  371  git add q2.txt
+  372  git add q3.txt
+  373  git add q4.txt
+  374  git add q5.txt
+  375  git add q6.txt
+  376  git commit -m "add q1-6 txt files"
+  377  git push origin Q123456
+  378  git checkout main
+  379  git add text.txt
+  380  git add test.txt
+  381  git commit -m "test"
+  382  git push origin main
+  383  git checkout main
+  384  gh pr --title "merge Q123456 to main"  --assignee "@me" --base "merge to main" --base "main"
+  385  gh pr create  --title "merge Q123456 to main"  --assignee "@me" --base "merge to main" --base "main"
+  386  git checkout Q123456
+  387  gh pr create  --title "merge Q123456 to main"  --assignee "@me" --base "merge to main" --base "main"
+  388  gh merge
+  389  gh pr
+  390  gh pr create  --title "merge Q123456 to main"  --assignee "@me" --base "merge to main" --base "main"
+  391  git checkout Q123456
+  392  nano attempt2.txt
+  393  git add attempt2.txt
+  394  git commit -m "attempt 2"
+  395  git push origin Q123456
+  396  gh pr create  --title "merge Q123456 to main"  --assignee "@me" --base "merge to main" --base "main"
+  397  gh pr merge 4 --merge
+  398  git checkout main
+  399  nano q7.txt
+  400  nano q8.txt
+  401  nano q7.txt
+  402  git add q7.txt
+  403  git add q8.txt
+  404  git commit -m "add q7 and q8 txt files"
+  405  git push origin main
+  406  git pull
+  407  git config pull.ff only
+  408  git pull
+  409  git rebase
+  410  git pull
+  411  git push origin main
+  412  curl icanhazip.com
+  413  mongosh "mongodb+srv://cluster0.x93tkgs.mongodb.net/" --apiVersion 1 --username tomasu345j_db_user
+  414  ls
+  415  mkdir ca1
+  416  cd ca1
+  417  git clone pearse1104/CA1-SOFTWARE
+  418  gh repo clone pearse1104/CA1-SOFTWARE
+  419  ls
+  420  cd CA1-SOFTWARE
+  421  ls
+  422  bash user-setup.sh
+  423  ls
+  424  echo user.txt
+  425  nano user.txt
+  426  ls
+  427  git clone git@github.com:TomasAuskalnis/devopsCA1sw.git
+  428  ls
+  429  mv user-setup.sh /devopsCA1sw
+  430  mv --help
+  431  cp -- help
+  432  cp --help
+  433  ls
+  434  cp user-setup.sh devopsCA1sw
+  435  cp user.txt devopsCA1sw
+  436  ls
+  437  cd devopsCA1sw
+  438  ls
+  439  git add user-setup.sh
+  440  git add user.txt
+  441  git commit -m "Push 2 files to repo
+  442  git commit -m "Push 2 files to repo
+  443  git commit -m "Push 2 files to repo"
+  444  git push origin main
+  445  cd
+  446  ls
+  447  cd ca1
+  448  ls
+  449  git clone git@github.com:pearse1104/X00227150.git
+  450  ls
+  451  cd X00227150
+  452  cp user-setup.sh X00227150
+  453  cd
+  454  cd CA1-SOFTWARE
+  455  cd ca1
+  456  cd CA1-SOFTWARE
+  457  ls
+  458  cp user-setup.sh /ca1/X00227150
+  459  git clone git@github.com:pearse1104/X00227150.git
+  460  cp user-setup.sh X00227150
+  461  ls
+  462  cp user.txt X00227150
+  463  cd X00227150
+  464  ls
+  465  git add user-setup.sh
+  466  git add user.txt
+  467  git commit -m "push 2 files to the collab repo"
+  468  git push origin main
+  469  git branch myCA1branch
+  470  git checkout myCA1branch
+  471  nano user.txt
+  472  git add user.txt
+  473  git commit -m "change user.txt"
+  474  git push origin myCA1branch
+  475  git checkout main
+  476  git merge myCA1branch
+  477  git commit -m "merged myCA1branch"
+  478  git push origin main
+  479  git add user.txt
+  480  git commit -m "version 2"
+  481  nano user.txt
+  482  git add user.txt
+  483  git commit -m "version 2"
+  484  history > history.txt
+  485  ls
+  486  git add history.txt
+  487  git commit -m "add history to repo"
+  488  git push origin main
+  489  ls
+  490  mkdir redisLab
+  491  cd redisLab
+  492  docker run --name redis-tutorial -p 6379:6379 -d redis:latest
+  493  docker exec -it redis-tutorial redis-cli
+  494  docker stop redis-tutorial
+  495  docker rm redis-tutorial
+  496  docker run --name redis-lab -p 6379:6379 -d redis:latest
+  497  cd
+  498  ls
+  499  cd devops
+  500  ls
+  501  mkdir week9
+  502  cd week9
+  503  git clone git@github.com:TomasAuskalnis/lab9.git
+  504  cd lab9
+  505  nano validate-data.sh
+  506  bash validate-data.sh "pearse mccarthy" "0831122334"
+  507  nano  validate-data.s
+  508  nano  validate-data.sh
+  509  bash validate-data.sh "pearse mccarthy" "0831122334"
+  510  bash validate-data.sh "tomas auskalnis" "0830936614"
+  511  bash validate-data.sh "TomasA auskalnis" "0830936614"
+  512  bash validate-data.sh "Really long name that shouldnt bebe allowed by the system" "083238239"
+  513  nano validate-data.sh
+  514  bash validate-data.sh "Testtesttesttesttest" "3084348343834343843434"
+  515  nano validate-data.sh
+  516  bash validata-data.sh
+  517  bash validate-data.sh
+  518  bash validate-data.sh 
+  519  bash validate-data.sh
+  520  nano validate-data.sh
+  521  git add validate-data.sh
+  522  git commit -m "Push  validate-data.sh to main"
+  523  git push origin main
+  524  git pull
+  525  git fetch
+  526  git pull
+  527  git config.rebase true
+  528  git config pull.rebase true
+  529  git pull
+  530  ls
+  531  git push origin main
+  532  git pull
+  533  git branch test
+  534  git checkout test
+  535  nano validate-data.sh
+  536  git add validate-data.sh
+  537  git commit -m "Update validate-data.sh to have max char limit for name of 20"
+  538  git push origin test
+  539  nano validate-data.sh
+  540  git add validate-data.sh
+  541  git commit -m "Update validate-data.sh in test branch"
+  542  git push origin test
+  543  git checkout main
+  544  history > history.txt
